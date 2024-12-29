@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Dx202012010213
+    url: jdbc:mysql://127.0.0.1:3306/user_center
+  # session 失效时间
+  session:
+    timeout: 86400
+server:
+  servlet:
+    context-path: /api
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-not-delete-value: 0
+      logic-delete-value: 1
